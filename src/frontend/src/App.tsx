@@ -1040,21 +1040,9 @@ function ComputerAccessoriesSection() {
 const TECHNICIANS = [
   {
     name: "Aditya Kumar Behura",
-    role: "Senior Technician",
-    experience: "5 Years Experience",
-    specialty: "iOS & Android Specialist",
-  },
-  {
-    name: "Priya Verma",
-    role: "Hardware Expert",
-    experience: "3 Years Experience",
-    specialty: "Screen & Battery Specialist",
-  },
-  {
-    name: "Amit Kumar",
-    role: "Software Engineer",
-    experience: "4 Years Experience",
-    specialty: "Software & Data Recovery",
+    role: "Head — Hardware, Software & All Repairs",
+    experience: "5+ Years Experience",
+    specialty: "Hardware · Software · iOS · Android · Data Recovery",
   },
 ];
 
@@ -1074,21 +1062,21 @@ function TechniciansSection() {
             TEAM
           </div>
           <h2 className="section-title text-3xl md:text-4xl">
-            OUR <span className="gold-word">EXPERT</span> TECHNICIANS
+            MEET THE <span className="gold-word">EXPERT</span> HEAD
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="flex justify-center">
           {TECHNICIANS.map((t, i) => (
             <div
               key={t.name}
-              className="gold-card hud-corner rounded-xl p-5 flex flex-col items-center text-center gap-3"
+              className="gold-card hud-corner rounded-xl p-8 flex flex-col items-center text-center gap-4 max-w-sm w-full"
               data-ocid={`technicians.item.${i + 1}`}
             >
               <div className="relative">
                 <img
                   src="/assets/generated/technician.dim_400x400.png"
                   alt={t.name}
-                  className="w-20 h-20 rounded-full object-cover"
+                  className="w-32 h-32 rounded-full object-cover"
                   style={{
                     border: "2px solid oklch(0.76 0.110 78 / 0.6)",
                     filter: "drop-shadow(0 0 8px oklch(0.76 0.110 78 / 0.3))",

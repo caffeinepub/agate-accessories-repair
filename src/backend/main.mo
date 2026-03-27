@@ -424,6 +424,26 @@ actor {
           durationEstimate = "30 minutes";
         },
       ),
+      (
+        getNextId(),
+        {
+          name = "Back Panel Repair";
+          description = "Replace cracked or damaged back glass/panel for a brand new look.";
+          priceRange = "800-2000 INR";
+          doorstepAvailable = true;
+          durationEstimate = "1-2 hours";
+        },
+      ),
+      (
+        getNextId(),
+        {
+          name = "Speaker & Button Repair";
+          description = "Fix unresponsive buttons or distorted speaker sound instantly.";
+          priceRange = "500-1500 INR";
+          doorstepAvailable = true;
+          durationEstimate = "1 hour";
+        },
+      ),
     ];
 
     let sampleProducts : [(Nat, Product)] = [

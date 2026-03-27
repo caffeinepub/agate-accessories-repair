@@ -481,6 +481,9 @@ const SERVICE_IMAGES: Record<string, string> = {
   "Water Damage Repair": "/assets/generated/service-water.dim_600x400.jpg",
   "Software Troubleshooting":
     "/assets/generated/service-software.dim_600x400.jpg",
+  "Back Panel Repair": "/assets/generated/service-back-panel.dim_600x400.jpg",
+  "Speaker & Button Repair":
+    "/assets/generated/service-speaker-button.dim_600x400.jpg",
 };
 
 function ServicesSection({ services }: { services: Service[] }) {
@@ -729,6 +732,17 @@ function WhyChooseUs() {
   );
 }
 
+const PRODUCT_IMAGES: Record<string, string> = {
+  "Fast Charging Cable":
+    "/assets/generated/product-fast-charging-cable.dim_600x400.jpg",
+  "Wireless Earbuds":
+    "/assets/generated/product-wireless-earbuds-v2.dim_600x400.jpg",
+  "Protective Phone Case":
+    "/assets/generated/product-phone-case.dim_600x400.jpg",
+  "Car Phone Holder":
+    "/assets/generated/product-car-phone-holder.dim_600x400.jpg",
+};
+
 const PRODUCT_CATEGORY_ICONS: Record<string, string> = {
   Cases: "📱",
   "Screen Guards": "🛡️",
@@ -796,9 +810,9 @@ function AccessoriesSection({ products }: { products: Product[] }) {
                 className="relative h-32 flex items-center justify-center"
                 style={{ background: "oklch(0.17 0.040 235)" }}
               >
-                {i === 0 ? (
+                {PRODUCT_IMAGES[p.name] ? (
                   <img
-                    src="/assets/generated/accessories-cases.dim_600x400.png"
+                    src={PRODUCT_IMAGES[p.name]}
                     alt={p.name}
                     className="w-full h-full object-cover"
                   />

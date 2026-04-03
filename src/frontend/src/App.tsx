@@ -25,6 +25,10 @@ import {
 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { BlogPost, Product, Review, Service } from "./backend.d";
+import { AboutUsSection } from "./components/AboutUsSection";
+import { BeforeAfterSection } from "./components/BeforeAfterSection";
+import { PhoneBrandsSection } from "./components/PhoneBrandsSection";
+import { SpinWheelSection } from "./components/SpinWheel";
 import {
   useGetAllBlogPosts,
   useGetAllProducts,
@@ -78,9 +82,10 @@ function AgateLogoSVG({ size = 40 }: { size?: number }) {
 const NAV_LINKS = [
   { label: "Home", id: "hero" },
   { label: "Services", id: "services" },
+  { label: "Brands", id: "phone-brands" },
+  { label: "Offers", id: "spin-wheel" },
   { label: "Accessories", id: "accessories" },
-  { label: "Computer", id: "computer-accessories" },
-  { label: "Technicians", id: "technicians" },
+  { label: "About", id: "about" },
   { label: "Reviews", id: "reviews" },
   { label: "Blog", id: "blog" },
   { label: "Contact", id: "contact" },
@@ -1691,10 +1696,14 @@ export default function App() {
         <HeroSection />
         <StatsBar stats={stats ?? DEFAULT_STATS} />
         <ServicesSection services={services} />
+        <BeforeAfterSection />
+        <PhoneBrandsSection />
+        <SpinWheelSection />
         <WhyChooseUs />
         <AccessoriesSection products={products} />
         <ComputerAccessoriesSection />
         <TechniciansSection />
+        <AboutUsSection />
         <ReviewsSection reviews={reviews} />
         <BlogSection posts={posts} />
         <ContactSection />
